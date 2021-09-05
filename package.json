@@ -1,8 +1,4 @@
-"scripts": {
-    "start": "node script.js",
-   
-
-}
+{"scripts" : {"start" : "node script.js",}}
 
 
 {
