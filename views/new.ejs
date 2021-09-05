@@ -1,0 +1,54 @@
+
+
+  <style>
+  
+  body { 
+    background: url(/public/3.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+
+  .mb-3{
+
+font-weight: 600;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: #f3f046;
+
+}
+
+form{
+
+margin-top: 4%;
+}
+
+  
+  </style>
+<%layout('templ')%>
+
+    <h1>NEW CUSTOMER</h1>
+
+
+    <form action="/customers " method = 'post'>
+        <div class="mb-3">
+          <label for="name" class="form-label">Customer Name</label>
+          <input type="text" class="form-control" name='name'id='name' placeholder='customer name' >
+        </div>
+        <div class="mb-3">
+          <label for="accountNumber" class="form-label">AccountNumber </label>
+          <input type="number" class="form-control" name='accountNumber' id= 'accountNumber' placeholder='account number' >
+        </div>
+        <div class="mb-3">
+            <label for="balance" class="form-label">Balance </label>
+            <input type="number" class="form-control" name='balance'id='balance' placeholder='balance'>
+          </div>
+        
+        <button onclick ="pop()"; type="submit" class="btn btn-primary">SUBMIT</button>
+      </form>
+      <script>
+        function pop(){
+          swal("SUCCESS", "welcome to HHB", "success");
+        }
+      </script>

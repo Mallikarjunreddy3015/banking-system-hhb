@@ -1,0 +1,41 @@
+<%layout('templ')%>
+<style>
+    a{
+        text-decoration:none;
+    }
+
+    body { 
+  background: url(/public/2.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+
+    <h1>Edit Customer</h1>
+
+    <form action="/customers/<%= customer._id%>?_method=put " method = 'post'>
+        <div class="mb-3">
+          <label for="name" class="form-label">Customer</label>
+          <input type="text" class="form-control" name='name'id='name' placeholder='customer name'value = <%= customer.name%> >
+        </div>
+        <div class="mb-3">
+          <label for="accountNumber" class="form-label">AccountNumber </label>
+          <input type="number" class="form-control" name='accountNumber' id= 'accountNumber' placeholder='account number'value = <%= customer.accountNumber%> >
+        </div>
+        <div class="mb-3">
+            <label for="balance" class="form-label">Bank Balance </label>
+            <input type="number" class="form-control" name='balance'id='balance' placeholder='balance'value = <%= customer.balance%>>
+          </div>
+        
+        <button onclick ="pop()"; type="submit" class="btn btn-primary">SUBMIT</button>
+      </form>
+      <script>
+        function pop(){
+          swal("EDIT SUCCESS", "YOU DID IT !!", "success");
+        }
+      </script>
+
+  
+   <button style ="margin-top: 5%;"  type="submit" class="btn btn-primary"> <a style='color: cornsilk;' href= "/customers/<%=customer._id%>" > BACK </a></button>

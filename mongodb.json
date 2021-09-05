@@ -1,0 +1,29 @@
+db.customers.insertMany([
+{ 
+    name:"Malli",
+    accountNumber : 19117096,
+      balance : 100000,
+},
+
+{
+    name:"kishore",
+    accountNumber:1917097,
+       balance : 400000,
+    
+},
+    
+ {
+     name:"sharan",
+     accountNumber: 19117098,
+     balance : 300000,
+        
+ },
+        
+
+ {
+     name : "redeeppa",
+     accountNumber : 19117099,
+     balance : 200000,
+ },
+ 
+ ])

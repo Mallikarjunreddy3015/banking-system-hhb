@@ -1,0 +1,56 @@
+<style>
+
+body { 
+  background: url(/public/5.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.mb-3{
+
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(243, 70, 243);
+
+}
+
+form{
+
+  margin-top: 4%;
+}
+
+</style>
+
+
+<%layout('templ')%>
+
+<form action="/customers/<%= customer._id%>/newbalance?_method=put" method = 'post'>
+    <div class="mb-3">
+      <label for="customer" class="form-label">Customer Name</label>
+      <input disabled type="text"  name='customer' class="form-control" id="customer" value = <%= customer.name%> >
+    </div>
+    <div class="mb-3">
+      <label for="accountNumber" class="form-label">accountNumber </label>
+      <input  type="number"name='accountNumber' class="form-control" id="accountNumber" value = <%= customer.accountNumber%> disabled >
+    </div>
+    <div class="mb-3">
+        <label for="balance" class="form-label">Current Balance </label>
+        <input disabled name='balance' type="number" class="form-control" id="balance" value = <%= customer.balance%>>
+      </div>
+      <div class="mb-3">
+        <label for="amount" class="form-label">Enter Amount </label>
+        <input type="number" name = amount class="form-control" id="amount" >
+      </div>
+    <div class="mb-3 form-check">
+      <input required     type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">conform to pay</label>
+    </div>
+    <button onclick ="pop()"; type="submit" class="btn btn-primary">SUBMIT</button>
+  </form>
+  <script>
+    function pop(){
+      swal("Transaction successful", "COOL!", "success");
+    }
+  </script>

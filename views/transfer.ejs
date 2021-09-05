@@ -1,0 +1,42 @@
+<%  layout('templ') %>
+
+<style>
+  
+  body { 
+    background: url(/public/4.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  a{
+    text-decoration: none;
+    font-weight: 800;
+  }
+  
+  </style>
+<h1>SELECT A  CUSTOMER</h1>
+
+
+
+   <table class="table">
+    <thead class="h2">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">AccountNumber</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ol>
+        <% for(let cust of customer) { %>
+          <tr>
+            <td>  <li><a href= "/customers/<%= cust._id%>/transferform" >   <%=cust.name%></a> </li></td>
+            <td>  <%=cust.accountNumber%></td>
+          </tr>
+
+          <%}%>
+       <ol> 
+      
+    </tbody>
+  </table> 
+

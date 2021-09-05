@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link type="text/css" href="../public/styles.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HHB BANK</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img height="50px" width="50px" src="https://media-exp1.licdn.com/dms/image/C5603AQGG3x_k-i8Jyg/profile-displayphoto-shrink_400_400/0/1601879573228?e=1635984000&v=beta&t=tXzGrThAUzI78wrYJlGmBomOXPpz8gWNE4NDb6LdZCU" alt=""> </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active"  href="/customers">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/customers/new">NEWCUSTOMER</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/customers/transfer">TRANSFER</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<main class="container mt-10">
+       <%- body %>
+</main>
+ 
+
+    
+</body>
+</html>

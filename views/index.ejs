@@ -1,0 +1,38 @@
+<%layout('templ')%>
+<link href="../public/styles1.css" rel="stylesheet">
+  <h1 class="display-2" >Welcome to Helping Hands Bank</h1>
+  <button id ='malli' onclick="myFunction()" type="button" class="btn btn-success">OUR CUSTOMERS</button>
+   <DIV id ='view'style = "display:none;">
+    <table class="table">
+      <thead class="h2">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">AccountNumber</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ol>
+          <% for(let cust of customer) { %>
+            <tr>
+              <td>  <li><a href= "/customers/<%= cust._id %>" >   <%=cust.name%></a> </li></td>
+              <td>  <%=cust.accountNumber%></td>
+            </tr>
+
+            <%}%>
+         <ol> 
+        
+      </tbody>
+    </table> 
+   
+</DIV>
+  
+    <h2 >
+      "GOOD THINGS COME TO THOSE WHO HELP OTHERS"
+    </h2>
+
+    
+  <script>
+    function myFunction() {
+      document.getElementById("view").style.display = "inline";
+    }
+    </script>
