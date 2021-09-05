@@ -1,6 +1,6 @@
-"scripts": {
+"scripts": "{
     "start": "node script.js"
-}
+}"
 
 {
   "name": "programming",
