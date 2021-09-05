@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const customers = require('./models/customers');
 const methodoverride = require('method-override');
 
-mongoose.connect('mongodb://localhost:27017/banking', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect( process.env.MONGODB_URL ||'mongodb://localhost:27017/banking', {useNewUrlParser: true, useUnifiedTopology: true})
   .then(()=>{
    console.log(" mongo connected");
 })
