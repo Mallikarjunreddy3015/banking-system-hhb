@@ -7,7 +7,15 @@ const mongoose = require('mongoose');
 const customers = require('./models/customers');
 const methodoverride = require('method-override');
 
-mongoose.connect( process.env.MONGODB_URL ||'mongodb://localhost:27017/banking', {useNewUrlParser: true, useUnifiedTopology: true})
+
+const db = process.env.MONGODB_URL ||"mongodb+srv://<ARJUNA>:<Arjun@3015>@cluster0.7wlqd.mongodb.net/banking?retryWrites=true&w=majority"
+
+
+mongoose.connect(db,{
+   useNewUrlParser:true,
+   useUnifiedTopology:true
+
+})
   .then(()=>{
    console.log(" mongo connected");
 })
