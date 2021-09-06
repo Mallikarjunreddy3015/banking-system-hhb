@@ -99,4 +99,4 @@ app.delete('/customers/:id', async (req,res) => {
   
   
 
- app.listen(process.env.PORT)
+ app.listen(process.env.PORT,"0.0.0.0")
