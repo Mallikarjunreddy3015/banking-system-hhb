@@ -38,7 +38,7 @@ app.use(methodoverride('_method'));
 
 
 
-app.get('/customers', async (req,res) => {
+app.get('/', async (req,res) => {
    const customer =await  customers.find({});
    res.render('index',{customer});
 })
