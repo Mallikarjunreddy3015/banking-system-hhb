@@ -23,7 +23,7 @@ mongoose.connect(db,{
    console.log( " mongo error");
    console.log(err);
 })
-
+   const mongourl= "mongodb+srv://<ARJUNA>:<Arjun%403015>@cluster0.7wlqd.mongodb.net/banking?retryWrites=true&w=majority";
 if(process.env.NODE_ENV=="production"){
    mongourl:process.env.MONGODB_URL
 }else{
