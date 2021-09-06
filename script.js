@@ -8,7 +8,7 @@ const customers = require('./models/customers');
 const methodoverride = require('method-override');
 
 
-const db = process.env.MONGODB_URL ||"mongodb+srv://<ARJUNA>:<Arjun%403015>@cluster0.7wlqd.mongodb.net/banking?retryWrites=true&w=majority"
+const db = process.env.PORT||"mongodb+srv://<ARJUNA>:<Arjun%403015>@cluster0.7wlqd.mongodb.net/banking?retryWrites=true&w=majority"
 
 
 mongoose.connect(db,{
