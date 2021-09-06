@@ -23,6 +23,19 @@ mongoose.connect(db,{
    console.log( " mongo error");
    console.log(err);
 })
+
+if(process.env.NODE_ENV=="production"){
+   mongourl:process.env.MONGODB_URL
+}else{
+   
+   {mongourl:"mongodb+srv://<ARJUNA>:<Arjun%403015>@cluster0.7wlqd.mongodb.net/banking?retryWrites=true&w=majority"}
+   
+}
+
+
+
+
+
 app.engine('ejs',ejsMate);
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
@@ -99,4 +112,4 @@ app.delete('/customers/:id', async (req,res) => {
   
   
 
- app.listen(process.env.PORT,"0.0.0.0")
+ app.listen(process.env.MONGODB_URL,"0.0.0.0")
