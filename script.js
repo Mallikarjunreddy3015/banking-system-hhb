@@ -98,7 +98,7 @@ app.get('/customers/:id', async (req,res) => {
 app.delete('/customers/:id', async (req,res) => {
    const { id } = req.params;
    const customer = await customers.findByIdAndDelete(id);
-   res.redirect('/customers');
+   res.redirect('/');
   })
 
   
