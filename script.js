@@ -8,7 +8,7 @@ const customers = require('./models/customers');
 const methodoverride = require('method-override');
 
 
-const db = process.env.PORT||"mongodb+srv://<ARJUNA>:<Arjun%403015>@cluster0.7wlqd.mongodb.net/banking?retryWrites=true&w=majority"
+const db ="mongodb+srv://<ARJUNA>:<Arjun%403015>@cluster0.7wlqd.mongodb.net/banking?retryWrites=true&w=majority"
 
 
 mongoose.connect(db,{
@@ -99,4 +99,4 @@ app.delete('/customers/:id', async (req,res) => {
   
   
 
- app.listen(3000||process.env.port)
+ app.listen(process.env.PORT)
